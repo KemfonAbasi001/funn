@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenoir | Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./explore.css">
+</head>
+<body>
+    <section class="section">
+        <div class="section__inner">
+            <div class="seacrhc_filter">
+                <div class="search__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                    <input type="text" name="" id="" placeholder="Search destinations, types...">
+                </div>
+                <button class="filter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sliders-horizontal w-4 h-4">
+                        <line x1="21" x2="14" y1="4" y2="4"></line>
+                        <line x1="10" x2="3" y1="4" y2="4"></line>
+                        <line x1="21" x2="12" y1="12" y2="12"></line>
+                        <line x1="8" x2="3" y1="12" y2="12"></line>
+                        <line x1="21" x2="16" y1="20" y2="20"></line>
+                        <line x1="12" x2="3" y1="20" y2="20"></line>
+                        <line x1="14" x2="14" y1="2" y2="6"></line>
+                        <line x1="8" x2="8" y1="10" y2="14"></line>
+                        <line x1="16" x2="16" y1="18" y2="22"></line>
+                    </svg>
+                    <p class="text-sm">Filter</p>
+                </>
+            </div>
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="beachfront">Beachfront</button>
+                <button class="filter-btn" data-filter="mountains">Mountains</button>
+                <button class="filter-btn" data-filter="countryside">Countryside</button>
+                <button class="filter-btn" data-filter="camping">Camping</button>
+                <button class="filter-btn" data-filter="city">City</button>
+                <button class="filter-btn" data-filter="castles">Castles</button>
+                <button class="filter-btn" data-filter="arctic">Arctic</button>
+
+            </div>
+
+            <p class="text--md"><span class="bold-txt" id="stayCount">12</span> Stays found</p>
+
+            <div id="featured-grid" class="section__grid">
+                <a href="./" class="card" data-filter="beachfront">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/hero-bg.jpg" class="image" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Santorini, Greece</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="">4.97</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Entire villa 4 beds · 4 beds</p>
+                        <p class="card__price">$420 <span>/ night</span></p>
+                    </div>
+                </a>
+                
+                <a href="./" class="card" data-filter="beachfront">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-two.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Maldives</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">5.0</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Overwater bungalow · 1 bed</p>
+                        <p class="card__price">$890 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="countryside">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-three.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Tuscany, Italy</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.92</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Private villa · 6 beds</p>
+                        <p class="card__price">$310 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="city">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-four.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Kyoto, Japan</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.89</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Traditional ryokan · 2 beds</p>
+                        <p class="card__price">$195 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="countryside">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-five.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Bali, Indonesia</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.95</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Jungle villa · 3 beds</p>
+                        <p class="card__price">$240 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="mountains">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-six.jpg" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Aspen, Colorado</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.91</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Mountain chalet · 5 beds</p>
+                        <p class="card__price">$560 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="beachfront">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-seven.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Amalfi Coast, Italy</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.98</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Cliffside cottage · 2 beds</p>
+                        <p class="card__price">$285 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="city">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-eight.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Dubia, UAE</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.88</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Penthouse suite · 3 beds</p>
+                        <p class="card__price">$750 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                 <a href="./" class="card" data-filter="mountains">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-ten.jpg" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Swiss Alps</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.94</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Mountain cabin · 4 beds</p>
+                        <p class="card__price">$380 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="city">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/site-one.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Amsterdam, Netherlands</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.86</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Canal house · 3 beds</p>
+                        <p class="card__price">$220 <span>/ night</span></p>
+                    </div>
+                </a>
+
+                <a href="./" class="card" data-filter="arctic">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/house-nin.jpg" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Iceland</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.99</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Glass cabin · 3 beds</p>
+                        <p class="card__price">$450 <span>/ night</span></p>
+                    </div>
+                </a>
+
+
+                <a href="./" class="card" data-filter="mountains">
+                    <div class="card__image-wrapper">
+                        <button class="love_btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4 transition-colors stroke-white">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </button>
+                        <img src="./images/site-three.png" alt="">
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details-row">
+                            <p class="card__location">Patagonia, Chile</p>
+                            <div class="card__rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                </svg>
+                                <span class="text--sm">4.93</span>
+                            </div>
+                        </div>
+                        <p class="text--sm">Remote lodge · 4 beds</p>
+                        <p class="card__price">$320 <span>/ night</span></p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+
+     <footer class="footer-section">
+        <div class="footer__inner">
+            <div class="first-footer__layer">
+                <div class="first__layer--one">
+                    <div class="first_layer-header">
+                        <p class="text--sm">Support</p>
+                    </div>
+                    <a href="./" class="">
+                        <p class="text--md">Help Centre</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">AirCover</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Anti-discrimination</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Disability support</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Cancellation options</p>
+                    </a>
+                </div>
+                <div class="first__layer--one">
+                    <div class="first_layer-header">
+                        <p class="text--sm">Hosting</p>
+                    </div>
+                    <a href="./" class="">
+                        <p class="text--md">Lumine your home</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">AirCover for Hosts</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Explore hosting resources</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Community forum</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Hosting responsibly</p>
+                    </a>
+                </div>
+                <div class="first__layer--one">
+                    <div class="first_layer-header">
+                        <p class="text--sm">Lumine</p>
+                    </div>
+                    <a href="./" class="">
+                        <p class="text--md">Newsroom</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">New features</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Careers</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Investors</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Gift cards</p>
+                    </a>
+                </div>
+                <div class="first__layer--one">
+                    <div class="first_layer-header">
+                        <p class="text--sm">Explore</p>
+                    </div>
+                    <a href="./" class="">
+                        <p class="text--md">Beachfront</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Mountain stays</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Unique homes</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Experiences</p>
+                    </a>
+                    <a href="./" class="">
+                        <p class="text--md">Luxury stays</p>
+                    </a>
+                </div>
+            </div>
+            <div class="second-footer__layer">
+                <div class="just-text__footer">
+                    <p class="text--md">© <span id="year"></span> Avenoir</p>
+                    <p class="text--md">·</p>
+                    <p class="text--md">Privacy</p>
+                    <p class="text--md">·</p>
+                    <p class="text--md">Terms</p>
+                    <p class="text--md">·</p>
+                    <p class="text--md">Sitemap</p>
+                </div>
+                <div class="just-svg__footer">
+                    <a href="./" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter w-3.5 h-3.5 text-muted-foreground">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                        </svg>
+                    </a>
+                    <a href="./" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-3.5 h-3.5 text-muted-foreground">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="./" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-3.5 h-3.5 text-muted-foreground">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="./" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube w-3.5 h-3.5 text-muted-foreground">
+                            <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                            <path d="m10 15 5-3-5-3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="main.js">
+    </script>
+</body>
+</html>
