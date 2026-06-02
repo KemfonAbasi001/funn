@@ -204,6 +204,7 @@ input{
     font-size: 20px;
     line-height: 28px;
     font-weight: 300;
+    /* background: red; */
     color: rgba(233, 234, 237, 0.9);
 }
 
@@ -451,4 +452,92 @@ input{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.gridgdg .card__location{
+    font-size: .95rem;
+}
+
+.gridgdg .card__price{
+    font-size: 13.7px;
+}
+
+.gridgdg .card__details{
+    gap: 5px;
+}
+
+.gridgdg .card__rating{
+    gap: 2px;
+    /* font-size: 1px; */
+}
+
+.gridgdg svg{
+    width: 15px;
+    height: 15px;
+}
+
+.gridgdg ,.text--sm{
+    font-size: 12px;
+}
+
+
+.dahboard{
+    background-color: rgb(18, 19, 23);
+    border: 1px solid rgba(31, 34, 40, 0.4);
+    border-radius: 12px;
+    padding: 20px 0;
+    width: 100%;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dhs_one{
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.dhs_one .text--md{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dallas{
+    padding: 15px;
+    /* background-color: red; */
+    border-width: 1px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-color: rgba(31, 34, 40, 0.4);
+}
+
+.left-da img{
+    height: 60px;
+    width: 64px;
+    border-radius: 12px;
+}
+
+.left-da{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-dah{
+    /* align-self: flex-end; */
+}
+.right-dah .text--md{
+    /* align-self: flex-end; */
+    color: rgb(96, 165, 250);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    padding: 7px 13px;
+    border-radius: 30px;
+    background-color: rgba(59, 130, 246, 0.1);
 }

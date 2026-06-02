@@ -22,11 +22,13 @@ body {
     padding: 80px 0;
 }
 .section__inner {
-  width: min(90%, 1200px);
+  width: min(100%, 1200px);
   margin-inline: auto;
   gap: 30px;
   display: flex;
   flex-direction: column;
+  /* background-color: red; */
+  padding: 20px;
 
 }
 
