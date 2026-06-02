@@ -218,7 +218,7 @@ input{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
 }
 
 .loveej{
@@ -228,7 +228,7 @@ input{
     border-style: solid;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
 }
 
 .svg-loya{
@@ -236,7 +236,7 @@ input{
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    padding: 12px 12px;
+    padding: 12px;
     width: fit-content;
     border: 1px solid rgba(31, 34, 40, 0.4);
     /* box-sizing: content-box; */
@@ -273,7 +273,7 @@ input{
 .felxing > div{
     width: 50%;
     display: flex;
-    gap: 15px;
+    gap: 25px;
     flex-direction: column;
 }
 
@@ -286,4 +286,169 @@ input{
     gap: 8px;
     /* justify-content: center; */
     align-items: center;
+}
+
+.revuwe__cards-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid_two_revies{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    background-color: rgb(18, 19, 23);
+    border: 1px solid rgba(31, 34, 40, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* .grid_two_revies > div{
+    width: 100%;
+    background-color: red;
+    padding: 20px;
+    border-radius: 12px; */
+/* } */
+
+.top_review_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card-container{
+    width: 100%;
+    background-color: rgb(18, 19, 23);
+    border: 1px solid rgba(31, 34, 40, 0.4);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.price-header{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.pricingf{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.smaller-head{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-section{
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(31, 34, 40, 0.4);
+}
+
+.input_check{
+    display: flex;
+    /* background-color: gold; */
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgba(31, 34, 40, 0.4);
+}
+
+.input_check > div{
+    padding: 15px;
+    width: 50%;
+}
+
+.date-input input{
+    color:  rgb(103, 111, 126);
+}
+
+.guests-section{
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 15px;
+    color: rgb(103, 111, 126);
+    gap: 10px;
+}
+
+.border{
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-color: rgba(31, 34, 40, 0.4);
+}
+
+.date-section label{
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1.2px;
+    font-size: 11px;
+}
+
+.reserve-btn{
+    width: 100%;
+    border-radius: 12px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    color: rgba(233, 234, 237, 0.8);
+    letter-spacing: 1.2px;
+    font-size: 14px;
+    border: 0;
+    padding: 13px 0;
+    background-color: rgba(233, 234, 237, 0.1);
+}
+
+
+.breakdown-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-breakdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.total{
+    border-width: 1px 0 0 0;
+    border-color: rgba(31, 34, 40, 0.4);
+    border-style: solid;
+    padding: 10px 0;
+}
+
+.guests-btn{
+    padding: 5px 9px;
+    border-radius: 100%;
+    color: rgb(103, 111, 126);
+    background-color: inherit;
+    border: 1px solid rgba(31, 34, 40, 0.4);
+}
+
+
+.loggn{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gridgdg{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
 }

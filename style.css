@@ -185,7 +185,7 @@ body {
 
 .card__price{
     font-weight: 600;
-    font-size: 15.6px;
+    font-size: 15.9px;
     color: rgba(233, 234, 237, 0.8);
     /* color: rgba(255, 255, 255, 0.6); */
 }
@@ -269,7 +269,8 @@ body {
 
 .card__details__two{
   /* background-color: #1F2228; */
-  padding: 15px ;
+  /* padding: 15px; */
+  padding: 25px 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -325,7 +326,8 @@ body {
 }
 
 /* Review Stars */
-.review-card__stars svg {
+.review-card__stars svg,
+.smaller-head svg {
     height: 17px;
     width: 17px;
     /* width: fit-content; */
@@ -345,8 +347,8 @@ body {
 }
 
 .review-card__author-avatar {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     object-fit: cover;
     border-radius: 100%;
 }

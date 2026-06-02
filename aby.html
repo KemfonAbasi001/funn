@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Reservation Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0B0C0F 0%, #1F2228 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-container {
+            background: #121317;
+            border-radius: 16px;
+            border: 1px solid rgba(233, 234, 237, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .price-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .price-header .price {
+            font-size: 32px;
+            font-weight: 600;
+            color: #e9eaed;
+        }
+
+        .price-header .per-night {
+            font-size: 14px;
+            color: rgb(103, 111, 126);
+        }
+
+        .date-section {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .date-input {
+            flex: 1;
+        }
+
+        .date-input label {
+            display: block;
+            font-size: 12px;
+            color: rgb(103, 111, 126);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .date-input input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(31, 34, 40, 0.5);
+            border: 1px solid rgba(233, 234, 237, 0.1);
+            border-radius: 12px;
+            color: #e9eaed;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .date-input input:focus {
+            outline: none;
+            border-color: rgba(233, 234, 237, 0.3);
+            background: rgba(31, 34, 40, 0.7);
+        }
+
+        .date-input input::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+
+        .guests-section {
+            margin-bottom: 25px;
+        }
+
+        .guests-section label {
+            display: block;
+            font-size: 12px;
+            color: rgb(103, 111, 126);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .guests-control {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(31, 34, 40, 0.5);
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(233, 234, 237, 0.1);
+        }
+
+        .guests-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(233, 234, 237, 0.2);
+            background: rgba(31, 34, 40, 0.8);
+            border-radius: 8px;
+            color: #e9eaed;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .guests-btn:hover:not(:disabled) {
+            background: rgba(31, 34, 40, 1);
+            border-color: rgba(233, 234, 237, 0.3);
+        }
+
+        .guests-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .guests-display {
+            font-size: 16px;
+            font-weight: 500;
+            color: #e9eaed;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .reserve-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #378ADD 0%, #185FA5 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .reserve-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(55, 138, 221, 0.3);
+        }
+
+        .reserve-btn:active {
+            transform: translateY(0);
+        }
+
+        .price-breakdown {
+            background: rgba(31, 34, 40, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(233, 234, 237, 0.1);
+        }
+
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: rgb(103, 111, 126);
+        }
+
+        .breakdown-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .breakdown-row.total {
+            border-top: 1px solid rgba(233, 234, 237, 0.1);
+            padding-top: 12px;
+            margin-top: 12px;
+            color: #e9eaed;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .breakdown-row .amount {
+            color: #e9eaed;
+            font-weight: 500;
+        }
+
+        .breakdown-row.total .amount {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="price-header">
+            <span class="price" id="priceDisplay">$420</span>
+            <span class="per-night">per night</span>
+        </div>
+
+        <div class="date-section">
+            <div class="date-input">
+                <label>Check in</label>
+                <input type="date" id="checkInDate" placeholder="MM/DD/YY">
+            </div>
+            <div class="date-input">
+                <label>Check out</label>
+                <input type="date" id="checkOutDate" placeholder="MM/DD/YY">
+            </div>
+        </div>
+
+        <div class="guests-section">
+            <label>Guests</label>
+            <div class="guests-control">
+                <button class="guests-btn" id="minusBtn">−</button>
+                <span class="guests-display" id="guestCount">1 guest</span>
+                <button class="guests-btn" id="plusBtn">+</button>
+            </div>
+        </div>
+
+        <button class="reserve-btn">Reserve</button>
+
+        <div class="price-breakdown">
+            <div class="breakdown-row">
+                <span id="nightsLabel">Select dates to calculate</span>
+                <span class="amount" id="subtotal">$0</span>
+            </div>
+            <div class="breakdown-row">
+                <span>Cleaning fee</span>
+                <span class="amount">$85</span>
+            </div>
+            <div class="breakdown-row">
+                <span>Service fee</span>
+                <span class="amount">$168</span>
+            </div>
+            <div class="breakdown-row total">
+                <span>Total</span>
+                <span class="amount" id="totalPrice">$0</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const checkInInput = document.getElementById('checkInDate');
+        const checkOutInput = document.getElementById('checkOutDate');
+        const guestCountDisplay = document.getElementById('guestCount');
+        const minusBtn = document.getElementById('minusBtn');
+        const plusBtn = document.getElementById('plusBtn');
+        const nightsLabel = document.getElementById('nightsLabel');
+        const subtotalDisplay = document.getElementById('subtotal');
+        const totalDisplay = document.getElementById('totalPrice');
+
+        const pricePerNight = 420;
+        const cleaningFee = 85;
+        const serviceFee = 168;
+        let guests = 1;
+
+        function calculateNights() {
+            const checkIn = checkInInput.value;
+            const checkOut = checkOutInput.value;
+            
+            if (!checkIn || !checkOut) {
+                return null;
+            }
+            
+            const checkInDate = new Date(checkIn);
+            const checkOutDate = new Date(checkOut);
+            const timeDiff = checkOutDate - checkInDate;
+            const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+            return Math.max(1, nights);
+        }
+
+        function updateCalculations() {
+            const nights = calculateNights();
+            
+            if (nights === null) {
+                nightsLabel.textContent = 'Select dates to calculate';
+                subtotalDisplay.textContent = '$0';
+                totalDisplay.textContent = '$0';
+                return;
+            }
+            
+            const subtotal = pricePerNight * nights;
+            const total = subtotal + cleaningFee + serviceFee;
+            
+            nightsLabel.textContent = `$${pricePerNight} × ${nights} night${nights !== 1 ? 's' : ''}`;
+            subtotalDisplay.textContent = `$${subtotal.toLocaleString()}`;
+            totalDisplay.textContent = `$${total.toLocaleString()}`;
+        }
+
+        function updateGuestCount() {
+            guestCountDisplay.textContent = guests + ' guest' + (guests !== 1 ? 's' : '');
+        }
+
+        minusBtn.addEventListener('click', () => {
+            if (guests > 1) {
+                guests--;
+                updateGuestCount();
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            if (guests < 10) {
+                guests++;
+                updateGuestCount();
+            }
+        });
+
+        checkInInput.addEventListener('change', updateCalculations);
+        checkOutInput.addEventListener('change', updateCalculations);
+
+        updateCalculations();
+    </script>
+</body>
+</html>
