@@ -24,13 +24,13 @@ body {
 
 
 .section__inner {
-  width: min(95%, 1200px);
+  width: 93%;
   margin-inline: auto;
   gap: 30px;
   display: flex;
   flex-direction: column;
   /* background-color: red; */
-  padding: 20px;
+  /* padding: 20px; */
 
 }
 
@@ -513,7 +513,7 @@ body {
 .footer__inner{
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 93%;
     gap: 40px;
     /* background-color: gold; */
 }

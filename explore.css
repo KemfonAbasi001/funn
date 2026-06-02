@@ -497,7 +497,7 @@ input{
 .dashboard__header{
     display: flex;
     align-items: center;
-    background-color: red;
+    /* background-color: red; */
     padding: 0 15px;
     justify-content: space-between;
 }
@@ -520,14 +520,14 @@ input{
 }
 
 .booking-card__content img{
-    height: 64px;
-    width: 64px;
+    height: 80px;
+    width: 80px;
     border-radius: 12px;
 }
 
 .booking-card__content{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
