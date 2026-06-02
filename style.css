@@ -15,6 +15,215 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+.navbar-section{
+    width: 93%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    padding: 12px 0;
+}
+
+
+li{
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+}
+
+.nav-header--scrolled {
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+}
+
+
+.list-items{
+    display: none;
+}
+
+.signUp_btn{
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #A3A4A6;
+    gap: 6px;
+}
+
+.logo-text{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #D2D3D5;
+    /* font-family: cursive; */
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background-color: gold; */
+}
+
+
+
+
+.hero {
+    width: 100%;
+    padding: 100px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__inner {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* background-color: red; */
+}
+
+/* Hero Typography */
+.hero__title {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    line-height: 50px;
+    color: rgb(255, 255, 255);
+    margin: 30px 0 17px 0;
+}
+
+.hero__title--accent {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.hero__subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    line-height: 30px;
+    /* background-color: red; */
+    font-weight: 300;
+    max-width: 560px;
+}
+
+.hero__badge {
+    padding: 5px 13px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.hero__search{
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: rgba(11, 12, 15, 0.8);
+    border: 1.2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 40px;
+    }
+
+    .hero__search > .hero__search-item {
+        padding: 17px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all .2s ease;
+    }
+
+    .hero__search > .hero__search-item--cta {
+        border: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+/* ==================== FILTER BAR SECTION ==================== */
+.filter-bar {
+    background-color: #0B0C0F;
+    position: sticky;
+    top: 58px;
+    z-index: 2000;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(31, 34, 40, 0.3);
+}
+
+.filter-bar__inner {
+    display: flex;
+    width: 93%;
+    gap: 5px;
+    overflow: scroll;
+}
+
+
+.filter-bar__btn {
+    padding: 13px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    border: 0px;
+}
+
+
+.filter-bar__btn .text--sm {
+    transition: color 0.3s ease;
+}
+
+.filter-bar__btn:hover .text--sm {
+    color: rgba(233, 234, 237, 0.9);
+}
+
+.filter-bar__btn svg {
+    color: rgb(103, 111, 126);
+    height: 20px;
+    transition: color 0.3s ease;
+}
+
+.filter-bar__btn:hover svg {
+    color: rgba(233, 234, 237, 0.9);
+}
+
+
 .section{
     width: 100%;
     background-color: #0B0C0F;
@@ -651,14 +860,6 @@ body {
 
 
 
-
-
-
-
-
-/* ===========================
-   TYPOGRAPHY
-=========================== */
 h1, h2, h3, p {
   margin: 0;
 }
@@ -669,62 +870,356 @@ a {
 
 
 
-/* Tablet+ — show full nav links */
-@media (min-width: 768px) {
-  .nav__links {
-    display: flex;
-  }
-
-  .nav__hamburger {
-    display: none;
-  }
-
-  .nav__mobile {
-    display: none !important;
-  }
-}
-
-
-@media (min-width: 768px) {
-  .stats__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 
 
-@media (min-width: 768px) {
-  .work__grid {
+
+
+
+
+
+
+/* Tablet */
+/* 
+@media screen and (min-width: 768px) {
+
+
+    #featured-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+} */
+
+
+/* Wide desktop */
+/* @media (min-width: 1280px) {
+
+} */
+
+@media screen and (min-width: 768px) {
+    #featured-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #destinations-grid{
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: 32px; */
+    }
+
+    #destinations-grid .card__image-wrapper {
+        height: 400px;
+    }
+
+ #experiences-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer__menu{
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-  }
-
-  .card--tall {
-    grid-row: span 2;
-    min-height: 520px;
-  }
-
-  .card--wide {
-    grid-column: span 2;
-  }
 }
 
-@media (min-width: 1024px) {
-  .card--wide {
-    grid-column: span 1;
-  }
-}
-
-@media (min-width: 768px) {
-  .service {
-    align-items: center;
-  }
-}
-
-
-@media (min-width: 768px) {
-  .footer__inner {
+.second-footer__layer{
     flex-direction: row;
-    justify-content: space-between;
-  }
+}
+
+}
+
+
+
+
+
+
+
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+
+
+.navbar-section{
+    width: 95%;
+}
+
+.list-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* background-color: gold; */
+}
+
+.list-option a{
+    padding: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #676F7E;
+    /* background-color: 3me; */
+}
+
+
+
+/* ==================== HERO SECTION ==================== */
+
+
+.hero__inner {
+    width: 60%;
+}
+
+/* Hero Badge */
+.hero__badge {
+    padding: 5px 13px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    width: fit-content;
+    font-size: 13px;
+}
+
+/* Hero Typography */
+.hero__title {
+    font-size: 100px;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    line-height: 113px;
+    color: rgb(255, 255, 255);
+    margin: 30px 0 17px 0;
+}
+
+
+.hero__subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    max-width: 560px;
+}
+
+/* Hero Search Bar */
+.hero__search {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: rgba(11, 12, 15, 0.8);
+    border: 1.2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.hero__search > .hero__search-item {
+    padding: 17px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all .2s ease;
+}
+
+.hero__search > .hero__search-item:hover {
+    background-color: rgba(255, 255, 255, 0.049);
+}
+
+.hero__search > .hero__search-item--cta {
+    background-color: rgba(255, 255, 255, 0.102);
+    border-right: 0;
+}
+
+.hero__search > .hero__search-item span {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.hero__search > .hero__search-item svg {
+    color: rgba(255, 255, 255, 0.4);
+    height: 16px;
+}
+
+/* Hero Stats Counter */
+.hero__stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 120px;
+    margin: 50px 0 0 0;
+}
+
+.hero__stat-number {
+    font-size: 30px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+}
+
+
+
+
+    
+    #featured-grid{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .section__inner{
+        width: 95%;
+        /* background-color: red; */
+    }
+
+    #featured-grid .card__image-wrapper{
+        height: 200px;
+    }
+
+    .section__title{
+        font-size: 30px;
+    }
+
+    .text--md,
+    .card__price{
+        font-size: 14px;
+        /* background-color: red; */
+    }
+
+    #destinations-grid .card__image-wrapper {
+    height: 300px;
+}
+
+    .card__price{
+        font-weight: 600;
+    }
+
+    .love_btn {
+        height: 30px;
+        width: 30px;
+    }
+
+    .love_btn svg {
+        height: 17px;
+        width: 17px;
+    }
+
+    .card__location{
+        font-size: 14px;
+        /* background-color: red; */
+    }
+
+    .card__rating{
+        gap: 0px;
+        /* background-color: gold; */
+    }
+
+    .card__rating svg{
+        height: 12px;
+    }
+
+    .card__rating span{
+        font-size: 12px;
+    }
+
+    .text--sm{
+        font-size: 12px;
+    }
+
+    .card__details{
+        gap: 6px;
+        padding: 1px 0;
+    }
+
+    #destinations-grid{
+        grid-template-columns: repeat(5, 1fr);
+        gap: 32px;
+    }
+
+    .card__destination-label{
+        gap: 3px;
+    }
+
+    #experiences-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .review-card__author .text--md{
+        font-size: 12px;
+    }
+
+
+
+    #bg__img-section{
+    padding: 90px 70px;
+}
+
+.insidee-head {
+    width: 420px;
+}
+
+
+#bg__img-section .inner-header {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.anchor-btn {
+    flex-direction: row;
+}
+
+.anchor-one-btn svg {
+    height: 20px;
+}
+
+.footer__menu{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.second-footer__layer{
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
