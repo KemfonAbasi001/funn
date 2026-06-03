@@ -1,3 +1,72 @@
+// ============================================================================
+// NAVBAR MOBILE MENU - SIMPLIFIED VERSION
+// ============================================================================
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Get the menu button elements
+    const hamburgerBtn = document.querySelector('.funnny');  // Three lines icon
+    const closeBtn = document.querySelector('.funy');        // X icon
+    const menuLinks = document.querySelectorAll('.list-option a');
+    
+    console.log('Hamburger button:', hamburgerBtn ? 'FOUND' : 'NOT FOUND');
+    console.log('Close button:', closeBtn ? 'FOUND' : 'NOT FOUND');
+    console.log('Menu links found:', menuLinks.length);
+    
+    // Open menu when hamburger is clicked
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Opening menu...');
+            document.body.classList.add('show-mobile-menu');
+        });
+    }
+    
+    // Close menu when X is clicked
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Closing menu...');
+            document.body.classList.remove('show-mobile-menu');
+        });
+    }
+    
+    // Close menu when a link is clicked
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            console.log('Link clicked, closing menu...');
+            document.body.classList.remove('show-mobile-menu');
+        });
+    });
+    
+    // Close menu when ESC key is pressed
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            console.log('ESC pressed, closing menu...');
+            document.body.classList.remove('show-mobile-menu');
+        }
+    });
+    
+    // Close menu when clicking outside (on the overlay)
+    const listItems = document.querySelector('.list-items');
+    if (listItems) {
+        listItems.addEventListener('click', function(e) {
+            // Only close if clicking the background, not the menu content
+            if (e.target === listItems) {
+                console.log('Overlay clicked, closing menu...');
+                document.body.classList.remove('show-mobile-menu');
+            }
+        });
+    }
+});
+
+// ============================================================================
+// ORIGINAL CODE - Keep all your existing functionality
+// ============================================================================
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // ===== FAVORITES/SAVED STAYS SYSTEM =====
@@ -325,35 +394,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeLoveButtons();
     populateSavedStays();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const navbar = document.querySelector(".nav-header");
 
